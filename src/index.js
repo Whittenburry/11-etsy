@@ -13,7 +13,16 @@
  *     (You will need more wrapping elements to style things)
  */
 function createResultShopItem(result) {
+  const itemOne = document.createElement(`article`);
+  itemOne.classList.add(`shop-item`);
+  itemOne.innerHTML =
 
+    `<img class="shop-item__pic" src="https://img1.etsystatic.com/121/0/5958031/il_fullxfull.986551961_attu.jpg" alt="Nicolas Cage Earrings - Nic Cage Studs">
+    <h3 class="shop-item__title">result</h3>
+    <h4 class="shop-item__shop-name">SleepyMountain</h4>
+    <p class="shop-item__price">$9.00</p>`;
+
+  return itemOne;
 }
 
 /**
