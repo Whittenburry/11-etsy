@@ -17,10 +17,14 @@ function createResultShopItem(result) {
   shopItem.classList.add(`shop-item`);
   shopItem.innerHTML =
 
-    `<img class="shop-item__pic" src="${result.Images[0].url_fullxfull}" alt="${result.title}">
-    <h3 class="shop-item__title">${result.title}</h3>
-    <h4 class="shop-item__shop-name">${result.Shop.shop_name}</h4>
-    <p class="shop-item__price">$${result.price}</p>`;
+    `<div className="shop-item__pic">
+        <img class="shop-item__pic" class ="shop-item__pic-image" src="${result.Images[0].url_fullxfull}" alt="${result.title}">
+      </div>
+      <div className="shop-item__info">
+        <h3 class="shop-item__title">${result.title}</h3>
+        <h4 class="shop-item__shop-name">${result.Shop.shop_name}</h4>
+        <p class="shop-item__price">$${result.price}</p>
+      </div>`;
 
   return shopItem;
 }
@@ -47,7 +51,7 @@ function showAllResults(response) {
     // Create a new shop item element for each item in items
     const shopItem = createResultShopItem(items[i]);
     // Append current shop item element to the products element
-    const itemsList = products.appendChild(shopItem);
+    products.appendChild(shopItem);
   }
   return undefined;
 }
@@ -64,4 +68,13 @@ function searchEtsy(searchTerm, getData = fetchEtsy) {
   return getData(searchTerm).then((results) => {
     showAllResults(results);
   });
+}
+
+function start() {
+  // Lookup the search bar button element
+
+  // Listen for click on search button
+  // When clicked
+  //   * Look up value for search bar input
+  //   * Lookup results for search term and render results to the DOM
 }

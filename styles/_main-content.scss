@@ -1,0 +1,39 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: $max-content-width;
+
+  margin: auto;
+}
+
+
+
+.shop-item {
+  width: calc(100% / 3 - #{$gutter} - #{$gutter});
+  margin: $gutter;
+  background: white;
+
+  &__pic {
+    width: 100%;
+  }
+
+  &__pic-image {
+    width: 100%;
+  }
+
+  &__info {
+
+  }
+
+  &__title {
+
+  }
+
+  &__shop-name {
+
+  }
+
+  &__price {
+
+  }
+}

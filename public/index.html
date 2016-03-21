@@ -47,24 +47,43 @@
 
   <div class="menu-container">
     <ul class="menu-list">
-      <li class="menu-list__item">Clothing & Accessories</li>
-      <li class="menu-list__item">Jewelry</li>
-      <li class="menu-list__item">Craft Supplies & Tools</li>
-      <li class="menu-list__item">Weddings</li>
-      <li class="menu-list__item">Entertainment</li>
-      <li class="menu-list__item">Home & Living</li>
-      <li class="menu-list__item">Kids & Baby</li>
-      <li class="menu-list__item">Vintage</li>
+      <div class="row">
+        <div class="item-wrapper">
+          <li class="menu-list__item">Clothing & Accessories</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Jewelry</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Craft Supplies & Tools</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Weddings</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Entertainment</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Home & Living</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Kids & Baby</li>
+        </div>
+        <div class="item-wrapper">
+          <li class="menu-list__item">Vintage</li>
+        </div>
+      </div>
     </ul>
   </div>
 
-  <div id="products"></div>
+  <div id="products" class="products-container"></div>
 
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
     // Starts the application and searches for "Yoshi"
     searchEtsy(`Yoshi`);
+    start();
   </script>
 </body>
 </html>
