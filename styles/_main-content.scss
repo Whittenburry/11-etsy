@@ -9,6 +9,9 @@
 
 
 .shop-item {
+  display: flex;
+  flex-direction: column;
+
   width: calc(100% / 3 - #{$gutter} - #{$gutter});
   margin: $gutter;
 
@@ -53,6 +56,9 @@
     padding: 0 $gutter;
 
     font-size: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &__shop-name {

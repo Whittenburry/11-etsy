@@ -17,7 +17,7 @@ function createResultShopItem(result) {
   shopItem.classList.add(`shop-item`);
   shopItem.innerHTML =
 
-      `<div className="shop-item__pic">
+      `<div class="shop-item__pic">
         <img class="shop-item__pic-image"
         src="${result.Images[0].url_fullxfull}" alt="${result.title}">
       </div>
