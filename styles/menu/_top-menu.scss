@@ -1,0 +1,43 @@
+.menu-container {
+  margin: auto auto $gutter;
+
+  border-bottom: 0.2rem solid $brand-light-gray;
+  background: $brand-white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: $max-content-width;
+
+  margin: auto;
+
+  &__item {
+    padding: $gutter;
+    color: darken($brand-light-gray, 30%);
+
+    &:hover {
+
+      color: $brand-gray;
+      cursor: pointer;
+
+    }
+  }
+}
+
+.item-wrapper {
+  flex-grow: 1;
+  align-self: center;
+  border-bottom: 0.2rem solid transparent;
+
+  &:hover {
+    border-bottom-color: $brand-primary;
+  }
+}

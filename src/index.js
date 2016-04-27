@@ -13,7 +13,23 @@
  *     (You will need more wrapping elements to style things)
  */
 function createResultShopItem(result) {
+  const shopItem = document.createElement(`article`);
+  shopItem.classList.add(`shop-item`);
+  shopItem.innerHTML =
 
+      `<div class="shop-item__pic">
+        <img class="shop-item__pic-image"
+        src="${result.Images[0].url_fullxfull}" alt="${result.title}">
+      </div>
+      <div className="shop-item__info">
+        <h3 class="shop-item__title">${result.title}</h3>
+        <div class="shop-item__info__name-price">
+          <h4 class="shop-item__shop-name">${result.Shop.shop_name}</h4>
+          <p class="shop-item__price">$${result.price}</p>
+        </div>
+      </div>`;
+
+  return shopItem;
 }
 
 /**
@@ -28,17 +44,19 @@ function createResultShopItem(result) {
  */
 function showAllResults(response) {
   // Get the products element from the DOM
-
+  const products = document.querySelector(`#products`);
   // Clear the contents of the products element
-
+  products.innerHTML = ``;
   // Set 'items' to the results array from the response
-  const items = 2; // 2 is only here to stop an error
+  const items = response.results; // 2 is only here to stop an error
 
   for (let i = 0; i < items.length; i++) {
     // Create a new shop item element for each item in items
-
+    const shopItem = createResultShopItem(items[i]);
     // Append current shop item element to the products element
+    products.appendChild(shopItem);
   }
+  return undefined;
 }
 
 /**
@@ -53,4 +71,13 @@ function searchEtsy(searchTerm, getData = fetchEtsy) {
   return getData(searchTerm).then((results) => {
     showAllResults(results);
   });
+}
+
+function start() {
+  // Lookup the search bar button element
+
+  // Listen for click on search button
+  // When clicked
+  //   * Look up value for search bar input
+  //   * Lookup results for search term and render results to the DOM
 }

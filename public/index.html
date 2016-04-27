@@ -1,57 +1,163 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>11-etsy</title>
-  <link rel="stylesheet" href="/app.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>11-etsy</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
 
-  <header class="site-header">
-    <nav class="top-nav">
-      <div class="container">
-        <div class="top-nav__row">
-          <h1 class="top-nav__logo">Etsy</h1>
-          <div class="top-nav__search">
-            <div class="input-addon">
-              <input type="text" class="input-addon__input" value="Yoshi">
-              <button class="input-addon__btn">Search</button>
+    <header class="site-header">
+      <nav class="top-nav">
+        <div class="container">
+          <div class="top-nav__row">
+            <h1 class="top-nav__logo">Etsy</h1>
+            <div class="top-nav__search">
+              <div class="input-addon">
+                <input type="text" class="input-addon__input" value="Yoshi">
+                <button class="input-addon__btn">Search</button>
+              </div>
+            </div>
+
+            <div class="top-nav__right">
+              <ul class="user-nav">
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#sell">Sell on Etsy</a>
+                </li>
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#register">Register</a>
+                </li>
+                <li class="user-nav__item user-nav__item--btn">
+                  <a class="user-nav__link" href="#login">Sign In</a>
+                </li>
+                <li class="user-nav__item user-nav__item--cart">
+                  <a class="user-nav__link" href="#login">
+                    <span class="cart-stack">
+                      <span class="cart-stack__icon fa fa-cart-plus"></span>
+                      Cart
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
+      </nav>
+    </header>
 
-          <div class="top-nav__right">
-            <ul class="user-nav">
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#sell">Sell on Etsy</a>
-              </li>
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#register">Register</a>
-              </li>
-              <li class="user-nav__item user-nav__item--btn">
-                <a class="user-nav__link" href="#login">Sign In</a>
-              </li>
-              <li class="user-nav__item user-nav__item--cart">
-                <a class="user-nav__link" href="#login">
-                  <span class="cart-stack">
-                    <span class="cart-stack__icon fa fa-cart-plus"></span>
-                    Cart
-                  </span>
-                </a>
-              </li>
-            </ul>
+    <div class="menu-container">
+      <ul class="menu-list">
+        <div class="row">
+          <div class="item-wrapper">
+            <li class="menu-list__item">Clothing & Accessories</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Jewelry</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Craft Supplies & Tools</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Weddings</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Entertainment</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Home & Living</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Kids & Baby</li>
+          </div>
+          <div class="item-wrapper">
+            <li class="menu-list__item">Vintage</li>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </ul>
+    </div>
 
-  <div id="products"></div>
+    <div class="main-content-outer-container">
+      <sidebar class="sidebar-container">
+        <h3 class="sidebar__heading">Refine your search</h3>
+        <div class="sidebar__search-fields">
+          <h4 class="search-fields__location">Shop location</h4>
+          <div class="search-fields__location__places">
+            <input type="radio">
+            <h3 class="location">Anywhere</h3>
+          </div>
+          <div class="search-fields__location__places">
+            <input type="radio">
+            <h3 class="location">United States</h3>
+          </div>
+          <a href="http://google.com" class="search-fields__location__choose">Choose a custom location</a>
+        </div>
+        <div class="sidebar__search-fields">
+          <h4 class="search-fields__item-type">Item type</h4>
+          <div class="search-fields__item-type__build">
+            <input type="radio">
+            <h3 class="build">All items</h3>
+          </div>
+          <div class="search-fields__item-type__build">
+            <input type="radio">
+            <h3 class="build">Handymade</h3>
+          </div>
+          <div class="search-fields__item-type__build">
+            <input type="radio">
+            <h3 class="build">Vintage</h3>
+          </div>
+        </div>
+        <form action="" class="search-fields__price">
+          <input type="text" placeholder="Low">
+          <h3 class="low-to-high">to</h3>
+          <input type="text" placeholder="High">
+        </form>
+        <div class="search-fields__colors">
+          <h3 class="search-fields__colors__heading">Filter by color</h3>
+          <button class="search-fields__colors__button red"></button>
+          <button class="search-fields__colors__button orange"></button>
+          <button class="search-fields__colors__button yellow"></button>
+          <button class="search-fields__colors__button green"></button>
+          <button class="search-fields__colors__button blue"></button>
+          <button class="search-fields__colors__button purple"></button>
+          <button class="search-fields__colors__button black"></button>
+          <button class="search-fields__colors__button white"></button>
+        </div>
 
-  <script src="/app.js" charset="utf-8"></script>
+        <div class="search-fields__ordering-options">
+          <h3 class="search-fields__ordering-options__heading">Ordering options</h3>
+          <div class="search-fields__ordering-options__option">
+            <input type="checkbox">
+            <h3 class="search-fields__ordering-options">Accepts Etsy gift cards</h3>
+          </div>
+          <div class="search-fields__ordering-options__option">
+            <input type="checkbox">
+            <h3 class="search-fields__ordering-options">Customizable</h3>
+          </div>
+        </div>
 
-  <script type="text/javascript">
-    // Starts the application and searches for "Yoshi"
-    searchEtsy(`Yoshi`);
-  </script>
-</body>
+        <div class="search-fields__ship-to">
+          <h3 class="search-fields__ship-to__heading">Ship to</h3>
+          <select name="ship_to" class="search__fields__ship-to__selector">
+            <optgroup label="CHOOSE">
+              <option value="US" selected="selected">United States</option>
+              <option value="GB">Great Britain</option>
+              <option value="IR">Ireland</option>
+              <option value="CA">Canada</option>
+            </optgroup>
+          </select>
+        </div>
+
+      </sidebar>
+
+      <div id="products" class="products-container"></div>
+    </div>
+
+    <script src="/app.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      // Starts the application and searches for "Yoshi"
+      searchEtsy(`Yoshi`);
+      start();
+    </script>
+  </body>
 </html>
