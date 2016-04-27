@@ -1,7 +1,7 @@
 .products-container {
   display: flex;
   flex-wrap: wrap;
-  width: $max-content-width;
+  max-width: $max-content-width;
 
   margin: auto;
 }
@@ -11,29 +11,63 @@
 .shop-item {
   width: calc(100% / 3 - #{$gutter} - #{$gutter});
   margin: $gutter;
-  background: white;
+
+  background: $brand-white;
 
   &__pic {
-    width: 100%;
-  }
+    position: relative;
 
-  &__pic-image {
     width: 100%;
+
+    border-radius: 0.1rem;
+
+    overflow: hidden;
+
+    &-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+    }
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+
+    &__name-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-top: $gutter;
+    }
 
   }
 
   &__title {
+    margin: 0;
+    padding: 0 $gutter;
 
+    font-size: 0.9rem;
   }
 
   &__shop-name {
+    margin: 0;
+    padding: 0 $gutter;
 
+    color: darken($brand-light-gray, 30%);
+    font-size: 0.8rem;
   }
 
   &__price {
+    margin: 0;
+    padding: 0 $gutter;
 
+    color: $brand-green;
+    font-size: 0.8rem;
   }
 }

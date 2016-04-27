@@ -17,13 +17,16 @@ function createResultShopItem(result) {
   shopItem.classList.add(`shop-item`);
   shopItem.innerHTML =
 
-    `<div className="shop-item__pic">
-        <img class="shop-item__pic" class ="shop-item__pic-image" src="${result.Images[0].url_fullxfull}" alt="${result.title}">
+      `<div className="shop-item__pic">
+        <img class="shop-item__pic-image"
+        src="${result.Images[0].url_fullxfull}" alt="${result.title}">
       </div>
       <div className="shop-item__info">
         <h3 class="shop-item__title">${result.title}</h3>
-        <h4 class="shop-item__shop-name">${result.Shop.shop_name}</h4>
-        <p class="shop-item__price">$${result.price}</p>
+        <div class="shop-item__info__name-price">
+          <h4 class="shop-item__shop-name">${result.Shop.shop_name}</h4>
+          <p class="shop-item__price">$${result.price}</p>
+        </div>
       </div>`;
 
   return shopItem;
